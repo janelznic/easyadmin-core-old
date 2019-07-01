@@ -1,0 +1,23 @@
+{
+  "name": "easyadmin-core",
+  "version": "4.0.0",
+  "description": "Easy Admin System - CMS focused on easy use - Backend core (Node.js)",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/janelznic/easyadmin-core.git"
+  },
+  "keywords": ["cms", "easyadmin", "node", "typescript"],
+  "author": "Jan Elznic",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/janelznic/easyadmin-core/issues"
+  },
+  "homepage": "https://github.com/janelznic/easyadmin-core#readme"
+}
