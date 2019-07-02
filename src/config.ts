@@ -5,7 +5,9 @@ const envConfigFilePath: string = `${process.cwd()}/config/.env`;
 
 // Check if the config file exists
 if (!fs.existsSync(envConfigFilePath)) {
-  throw new Error('You have to install this application first with bin/install.sh script');
+  throw new Error(
+    'You have to install this application first with bin/install.sh script',
+  );
 }
 
 dotenv.config({ path: envConfigFilePath });
