@@ -7,17 +7,86 @@
     "doc": "doc"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "backup:db": "cd bin && ./backup_db.sh && cd ../",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "tslint -p tsconfig.json -c tslint.json",
+    "prepare": "cd bin && ./install.sh && cd ../",
+    "prestart:prod": "rimraf dist && tsc",
+    "server:debug": "nodemon --config nodemon-debug.json",
+    "server:dev": "nodemon",
+    "server:hmr": "node dist/server",
+    "server:prod": "node dist/main.js",
+    "start": "ts-node -r tsconfig-paths/register src/main.ts",
+    "test": "jest",
+    "test:cov": "jest --coverage",
+    "test:e2e": "jest --config ./test/jest-e2e.json",
+    "test:watch": "jest --watch",
+    "webpack": "webpack --config webpack.config.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/janelznic/easyadmin-core.git"
   },
-  "keywords": ["cms", "easyadmin", "node", "typescript"],
+  "keywords": [
+    "cms",
+    "easyadmin",
+    "node",
+    "typescript"
+  ],
   "author": "Jan Elznic",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/janelznic/easyadmin-core/issues"
   },
-  "homepage": "https://github.com/janelznic/easyadmin-core#readme"
+  "homepage": "https://github.com/janelznic/easyadmin-core#readme",
+  "dependencies": {
+    "@nestjs/common": "^6.4.0",
+    "@nestjs/core": "^6.4.0",
+    "@nestjs/passport": "^6.1.0",
+    "@nestjs/platform-express": "^6.4.0",
+    "axios": "^0.19.0",
+    "dotenv": "^8.0.0",
+    "fs": "0.0.1-security",
+    "mysql2": "^1.6.5",
+    "passport": "^0.4.0",
+    "passport-http-bearer": "^1.0.1",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^6.5.2",
+    "sequelize": "^5.9.0",
+    "typescript": "^3.5.2"
+  },
+  "devDependencies": {
+    "@nestjs/testing": "^6.4.0",
+    "@types/express": "^4.17.0",
+    "@types/jest": "^24.0.15",
+    "@types/node": "^12.0.10",
+    "@types/supertest": "^2.0.7",
+    "jest": "^24.8.0",
+    "nodemon": "^1.19.1",
+    "prettier": "^1.18.2",
+    "rimraf": "^2.6.3",
+    "supertest": "^4.0.2",
+    "ts-jest": "^24.0.2",
+    "ts-loader": "^6.0.4",
+    "ts-node": "^8.3.0",
+    "tsconfig-paths": "^3.8.0",
+    "tslint": "^5.18.0",
+    "webpack": "^4.35.2",
+    "webpack-cli": "^3.3.5",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "src",
+    "testRegex": ".spec.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "node"
+  }
 }
