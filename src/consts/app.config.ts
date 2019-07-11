@@ -10,8 +10,8 @@ interface AppConfig {
 const AppConfig: AppConfig = {
   api: {
     baseUrl: 'http://www.cheapshark.com/api/',
-    version: '1.0',
-  },
+    version: '1.0'
+  }
 };
 
 export default AppConfig;

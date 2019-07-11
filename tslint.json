@@ -25,7 +25,16 @@
     "max-classes-per-file": [false],
     "variable-name": [false],
     "one-line": [false],
-    "one-variable-per-declaration": [false]
+    "one-variable-per-declaration": [false],
+    "trailing-comma": [true, {
+      "singleline": "never",
+      "multiline": {
+        "objects": "never",
+        "arrays": "never",
+        "functions": "never",
+        "typeLiterals": "ignore"
+      }
+    }]
   },
   "rulesDirectory": []
 }

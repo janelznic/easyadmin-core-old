@@ -1,4 +1,4 @@
-import { Sequelize } from 'sequelize';
+import {Sequelize} from 'sequelize';
 import CONFIG from '../../config';
 
 const db = new Sequelize(
@@ -8,8 +8,8 @@ const db = new Sequelize(
   {
     host: CONFIG.DB_HOST,
     dialect: CONFIG.DB_DIALECT,
-    operatorsAliases: false,
-  },
+    operatorsAliases: false
+  }
 );
 
 export default db;

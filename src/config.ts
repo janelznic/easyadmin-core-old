@@ -6,11 +6,11 @@ const envConfigFilePath: string = `${process.cwd()}/config/.env`;
 // Check if the config file exists
 if (!fs.existsSync(envConfigFilePath)) {
   throw new Error(
-    'You have to install this application first with bin/install.sh script',
+    'You have to install this application first with bin/install.sh script'
   );
 }
 
-dotenv.config({ path: envConfigFilePath });
+dotenv.config({path: envConfigFilePath});
 
 export default {
   ENV: process.env.APP || 'development',
@@ -20,5 +20,5 @@ export default {
   DB_HOST: process.env.DB_HOST || 'localhost',
   DB_USERNAME: process.env.DB_USER || 'root',
   DB_PASSWORD: process.env.DB_PASSWORD || 'aaa',
-  DB_DATABASE: process.env.DB_NAME || 'test',
+  DB_DATABASE: process.env.DB_NAME || 'test'
 };
