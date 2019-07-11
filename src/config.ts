@@ -10,7 +10,7 @@ if (!fs.existsSync(envConfigFilePath)) {
   );
 }
 
-dotenv.config({path: envConfigFilePath});
+dotenv.config({ path: envConfigFilePath });
 
 export default {
   ENV: process.env.APP || 'development',
