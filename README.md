@@ -132,9 +132,15 @@
 - `format` - Prettier code formatter
 - `lint` - Lint your TS code
 - `prepare` - Prepare config file and import MySQL database files
+- `reinstall` - Reinstall
 - `start` - Run the transpiled application
 - `structure` - List contents of directories in tree-like format
 - `test` - Run unit tests
+- `test:cov` - Show unit tests coverage
+- `test:e2e` - Run e2e tests
+- `test:watch` - Watch all files and run unit tests when changes occured
+- `uninstall` - Uninstall (only node_modules, not MySQL DB)
+
 
 
 ## Development

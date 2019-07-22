@@ -4,13 +4,6 @@
 # -------------------
 #
 
-echo ".-------------------------------------------------."
-echo "|                                                 |"
-echo "|     Easy Admin System - Installation script     |"
-echo "|                                                 |"
-echo "'-------------------------------------------------'"
-echo ""
-
 
 # Get source directory
 source _get_source_dir.sh
@@ -19,9 +12,19 @@ source _get_source_dir.sh
 # Check for previous installation
 CONFIG_FILE=$SOURCE/config/.env
 if [ -f $CONFIG_FILE ]; then
-    echo "Error: Config file '${CONFIG_FILE}' already exists, exitting."
-    exit 1
+    if [ ! $1 == "--from-npm" ]; then
+        echo "Error: Config file '${CONFIG_FILE}' already exists, exitting."
+    fi
+    exit 0
 fi
+
+
+echo ".-------------------------------------------------."
+echo "|                                                 |"
+echo "|     Easy Admin System - Installation script     |"
+echo "|                                                 |"
+echo "'-------------------------------------------------'"
+echo ""
 
 
 # Basic variables
