@@ -26,14 +26,14 @@
   - [NPM Scripts](#NPM-Scripts)
   - [Requests](#Requests)
     - [Request example using HTTP bareer token authentication](#Request-example-using-HTTP-bareer-token-authentication)
-    - [API](#API)
-      - [Swagger](#Swagger)
 - [Development](#Development)
   - [Recommendations](#Recommendations)
   - [Contributing](#Contributing)
     - [Git Branches](#Git-Branches)
   - [Development Environment](#Development-Environment)
-- [License](#License)
+  - [API](#API)
+    - [Swagger](#Swagger)
+- - [License](#License)
 
 
 ## Links
@@ -163,11 +163,6 @@ Requests authentication is performed using [HTTP bareer token](https://tools.iet
 curl --header "Authorization: Bearer Ynzyo9YNn1OAQ19rak90hXCIQh3Mj12Q" http://localhost:3000/users/list-users/
 ```
 
-#### API
-
-##### Swagger
-[Swagger UI](https://swagger.io/) is available on `http://localhost:3000/swagger/`
-
 
 ## Development
 
@@ -193,6 +188,14 @@ You can use built-in development server that will monitor for any changes in you
 
 1. Start development server with `npm run dev`
 2. Go to: `http://localhost:3000/`
+
+
+### API
+
+#### Swagger
+* [Swagger UI](https://swagger.io/) is available on `http://localhost:3000/swagger/`
+* How to authenticate:
+![How to authenticate](https://docs.nestjs.com/assets/swagger-auth.gif "How to authenticate")
 
 
 ## License
