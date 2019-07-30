@@ -1,14 +1,20 @@
 import { Injectable } from '@nestjs/common';
 import { User } from './interfaces/user.interface';
-import { userList } from './user.consts';
+import UserModel from './user.model';
 
 @Injectable()
 export class UserService {
-  async getUsers(): Promise<User[]> {
-    return await userList;
-  }
+  public getUsers = async (): Promise<User[]> => {
+    try {
+      const users: User[] = UserModel.findAll({
+        attributes: { exclude: ['password'] }
+      }).then(user => {
+        return user;
+      });
 
-  async findUserByToken(token: string): Promise<User | null> {
-    return await userList.find((user) => user.token === token);
+      return users;
+    } catch (error) {
+      throw new Error('Error reading users from database');
+    }
   }
 }

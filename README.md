@@ -23,6 +23,8 @@
   - [Installation](#Installation)
   - [Directory Structure](#Directory-Structure)
   - [NPM Scripts](#NPM-Scripts)
+  - [Requests authentication](#Requests-authentication)
+    - [Request example using HTTP bareer token authentication](#Request-example-using-HTTP-bareer-token-authentication)
 - [Development](#Development)
   - [Recommendations](#Recommendations)
   - [Contributing](#Contributing)
@@ -125,7 +127,7 @@
 ```
 
 
-## NPM Scripts
+### NPM Scripts
 - `backup:db` - Backup database structure and data into the file
 - `build` - Transpile TypeScript to ES2017
 - `dev` - Run the development server without transpile to ES2017
@@ -140,6 +142,19 @@
 - `test:e2e` - Run e2e tests
 - `test:watch` - Watch all files and run unit tests when changes occured
 - `uninstall` - Uninstall (only node_modules, not MySQL DB)
+
+
+### Requests authentication
+Requests authentication is performed using [HTTP bareer token](https://tools.ietf.org/html/rfc6750) in headers. The component temporarily retrieves a list of tokens from a constant provided by the `SessionModule`.
+
+#### Request example using HTTP bareer token authentication
+```bash
+curl --header "Authorization: Bearer Ynzyo9YNn1OAQ19rak90hXCIQh3Mj12Q" http://localhost:3000/users/list-users/
+```
+
+
+
+
 
 
 
@@ -166,7 +181,7 @@ __IMPORTANT NOTE:__ Always make pull requests only from your feature branch to *
 You can use built-in development server that will monitor for any changes in your source and automatically restart your server with monitoring for any changes in source code.
 
 1. Start development server with `npm run dev`
-2. Go to: `http://localhost:3000/users`
+2. Go to: `http://localhost:3000/`
 
 
 ## License
