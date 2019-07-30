@@ -89,7 +89,7 @@
 
 ### Directory structure
 ```
-── LICENSE
+├── LICENSE
 ├── README.md
 ├── bin
 |  ├── _get_source_dir.sh
@@ -107,6 +107,7 @@
 ├── nodemon.json
 ├── package-lock.json
 ├── package.json
+├── package.json.bak
 ├── src
 |  ├── app.module.ts
 |  ├── config.ts
