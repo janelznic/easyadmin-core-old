@@ -21,10 +21,13 @@
 - [Getting Started](#Getting-Started)
   - [Prerequisites](#Prerequisites)
   - [Installation](#Installation)
+  - [Start](#Start)
   - [Directory Structure](#Directory-Structure)
   - [NPM Scripts](#NPM-Scripts)
-  - [Requests authentication](#Requests-authentication)
+  - [Requests](#Requests)
     - [Request example using HTTP bareer token authentication](#Request-example-using-HTTP-bareer-token-authentication)
+    - [API](#API)
+      - [Swagger](#Swagger)
 - [Development](#Development)
   - [Recommendations](#Recommendations)
   - [Contributing](#Contributing)
@@ -40,6 +43,7 @@
 
 ## Documentation
 - [Users](doc/users.md)
+- [Swagger](#Swagger)
 
 
 ## Features
@@ -55,6 +59,7 @@
 - [Jest](https://jestjs.io/) unit tests framework
 - Using the last ECMAScript 8 (2017) features as `async-await`
 - [nodemon](https://nodemon.io/) build tool with monitoring for any changes in source code
+- [Swagger UI](https://swagger.io/) for API documentation preview and requests testing
 
 
 ## Getting Started
@@ -85,6 +90,11 @@
 4. Install all the module dependencies:
 
    `npm install` or `npm i`
+
+
+### Start
+1. Start HTTP server with `npm start`
+2. Go to: `http://localhost:3000/`
 
 
 ### Directory structure
@@ -145,7 +155,7 @@
 - `uninstall` - Uninstall (only node_modules, not MySQL DB)
 
 
-### Requests authentication
+### Requests
 Requests authentication is performed using [HTTP bareer token](https://tools.ietf.org/html/rfc6750) in headers. The component temporarily retrieves a list of tokens from a constant provided by the `SessionModule`.
 
 #### Request example using HTTP bareer token authentication
@@ -153,10 +163,10 @@ Requests authentication is performed using [HTTP bareer token](https://tools.iet
 curl --header "Authorization: Bearer Ynzyo9YNn1OAQ19rak90hXCIQh3Mj12Q" http://localhost:3000/users/list-users/
 ```
 
+#### API
 
-
-
-
+##### Swagger
+[Swagger UI](https://swagger.io/) is available on `http://localhost:3000/swagger/`
 
 
 ## Development
