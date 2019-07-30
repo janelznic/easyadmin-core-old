@@ -13,6 +13,8 @@ async function bootstrap() {
     .setTitle('easyadmin-core API')
     .setDescription('README: https://github.com/janelznic/easyadmin-core')
     .setVersion('4.0')
+    .addTag('users')
+    .addBearerAuth()
     .build();
   const document = SwaggerModule.createDocument(app, options);
   SwaggerModule.setup('swagger', app, document);
